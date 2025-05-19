@@ -1,0 +1,19 @@
+// a
+qcir read benchmark/SABRE/large/inc_237.qasm
+qcir print
+
+// b
+qc2tab
+table print
+
+// c
+tableau optimize tmerge
+table print
+
+// d
+tableau optimize hopt
+table print
+
+// e
+table2qc -r graysynth
+qc print
