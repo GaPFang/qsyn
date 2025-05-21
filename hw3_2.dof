@@ -1,0 +1,23 @@
+// a
+qcir read benchmark/SABRE/small/3_17_13.qasm
+qcir print -stat
+
+// b
+qc2zx
+zx print
+
+// c
+zx rule --to-z
+zx rule --hadamard-fusion
+zx rule --spider-fusion
+zx rule --hadamard-rule
+zx print
+
+// d
+zx optimize -full
+zx print
+zx print -g
+
+// e
+zx2qc
+qc print -stat
